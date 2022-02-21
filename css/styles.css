@@ -1,0 +1,199 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorBlue: #224957;
+    --colorGreen: #20DF7F;
+    --colorWhite: #FFFFFF;
+    --inputFocus: #26647a;
+    --darkModeBg: #093545;
+    --colorText: var(--colorBlue);
+    --colorBg: var(--colorWhite);
+    --ligtModeGreenWave: rgba(32, 223, 127, 0,8);
+    --lightModeBlueWave: rgba(34, 73, 87, 0,8);
+    --darkModeGreenWave: rgba(32, 223, 127, 0,09);
+    --darkModeBlueWave: rgba(229, 229, 229, 0,13);
+}
+.dark {
+    --colorBg: var(--darkModeBg);
+    --colorText: var(--colorWhite);
+    background-color:var(--colorBg);
+    color: var(--colorText); 
+}
+
+html, body, .container-flex {
+    height: 100%;
+    width: 100%;
+    background-color: var(--colorBg);
+    color: var(--colorText);
+    transition: 400ms;
+} 
+
+p, .submit-button {
+    font-size: 1rem;
+}
+
+h1, p, .login-form, .submit-button {
+    font-family: "Lexend Deca","sans-serif"; 
+    font-weight: 400; 
+} 
+
+.container-flex, .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container-flex {
+    position: relative;
+}
+
+.container {
+    margin-top: -3rem
+}
+
+h1, p {
+    color: var(--colorText);
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 80px;
+}
+
+p { 
+    line-height: 20px;
+    margin: 2rem auto 1.5rem;
+    text-align:center
+}
+
+.login-form {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between; 
+    height: 30%;   
+}
+
+.input {
+    width: 18.75rem;
+    height: 45px;
+    background-color: var(--colorBlue);
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    color: rgba(255, 255, 255, 1); 
+}
+
+.input:focus {
+    background-color: var(--inputFocus);
+    outline: none;
+    border-color:rgb(136, 135, 135); 
+}
+::placeholder {
+    color: rgba(255, 255, 255, 1); 
+}
+
+.remember-me-section {
+    height: 17px;
+    width: 18.3125rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", "sans-serif";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.checkbox[type=checkbox] {
+    accent-color: rgba(34, 73, 87, 1);
+    width: 18px;
+    height: 17px;
+    border-radius: 5px;
+    margin-right: -1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorText)
+}
+
+a:hover {
+    color:var(--colorGreen);
+}
+
+.submit-button {
+    background-color: var(--colorGreen);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0,3);
+    border-radius: 10px;
+    height: 45px;    
+}
+
+.submit-button:hover {
+    background-color: #13d474;
+}
+
+.bottom-waves {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    align-self: flex-end;
+    width: 100%;
+    max-height: 180px;
+}
+
+.bottom-waves-green {
+    z-index: 0;
+}
+
+.bottom-waves-dark {
+    z-index: 1;
+}
+
+.bottom-waves-green, .bottom-waves-dark {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    max-height: 180px;
+    width: 100%;
+} 
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  /* border: inherit; */
+  -webkit-text-fill-color: rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0 0 0px 1000px var(--colorBlue) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input:-webkit-autofill:focus {
+    /* border: inherit; */
+    -webkit-text-fill-color: rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0 0 0px 1000px var(--inputFocus) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.mode-btn {
+    position: absolute;
+    z-index: 100;
+    bottom: 2em;
+    left: 2em;
+    color: var(--colorText);
+    background: transparent;
+    cursor: pointer;
+    border-style: none;
+    width: 3em;
+    height: 3em;
+}
+  

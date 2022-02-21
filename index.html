@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In Page</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Montserrat&display=swap" rel="stylesheet" />
+    <!-- Css stylesheets -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/4ef9a0b249.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="body">
+    <div id="container-flex" class="container-flex">
+        <div class="container">
+            <h1 class="">Sign in</h1>
+            <p class="">Sign in with your account and see daily visitor counts!</p>
+            <form class="login-form" action="" method="POST">
+                <input type="email" class="input" name="username" id="username" placeholder="Email">
+                <input type="password" class="input" name="password" id="password" placeholder="Password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one  number and one uppercase and lowercase letter and at least 8 or more characters">
+                <div class="remember-me-section">
+                    <input type="checkbox" class="checkbox" name="" id="remember">
+                    <label class="" for="remember">Remember Me</label>
+                    <label class="" for="forget"><span><a class="" href=""  id="forget" class="for-dark-mode">Forget Password ?</a></span></label>
+                </div>
+                <button type="submit" class="submit-button">Login</button>
+            </form>
+        </div>
+        <div class="bottom-waves">
+            <svg class="bottom-waves-dark" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                viewBox="0 0 1440 320">
+                <path fill="#224957CC" fill-opacity="0.8"
+                    d="M0,256L80,256C160,256,320,256,480,224C640,192,800,128,960,112C1120,96,1280,128,1360,144L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                </path>
+            </svg>
+            <svg class="bottom-waves-green" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                viewBox="0 0 1440 320">
+                <path fill="#20DF7FCC" fill-opacity="0.8"
+                    d="M0,160L80,170.7C160,181,320,203,480,202.7C640,203,800,181,960,181.3C1120,181,1280,203,1360,213.3L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+        <button id="mode-btn" class="mode-btn">
+            <svg width="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 496"><path fill="currentColor" d="M8,256C8,393,119,504,256,504S504,393,504,256,393,8,256,8,8,119,8,256ZM256,440V72a184,184,0,0,1,0,368Z" transform="translate(-8 -8)"/></svg>
+          </button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
