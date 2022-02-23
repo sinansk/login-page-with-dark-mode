@@ -7,7 +7,6 @@ const body = document.getElementById("body");
 const enableDarkMode = () => {
     body.classList.add("dark")
     localStorage.setItem("dark-mode", "enabled");
-
 };
 
 const disableDarkMode = () => {
